@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>JS INDEX</title>
+    </head>
+    <body> 
+        <form onsubmit="return false">
+            <p>handphone :<input type="text" id="oppo" placeholder ="oppo"></p>
+            <p>handphone :<input type="text" id="vivo" placeholder="vivo"></p>
+            <p>handphone :<input type="text" id="realme" placeholder="realme"></p>
+            <button onclick="mona()">
+                Klik YAA!  
+            </button>
+        </form>
+        <script>
+            function mona() {
+                let m = document.getElementById("oppo").value;
+                let r = document.getElementById("vivo").value;
+                let z = document.getElementById("realme").value;
+
+                class handphone {
+                harga;
+                warna;
+                oppo;
+                vivo;
+                realme;
+
+                constructor(oppo, vivo, realme, warna, harga) {
+                    this.harga = 5200000;
+                    this.warna = "rose_gold";
+                    this.harga1 = 4300000;
+                    this.warna1 = "biru"
+                    this.harga2 = 3500000;
+                    this.warna2 = "hitam";
+                    this.oppo = m;
+                    this.vivo = r;
+                    this.realme = z; 
+                }
+
+                komunikasi(oppo) {
+                    return ( "handphone " + oppo + " ini digunakan untuk berkomunikasi");
+                }
+                dokumentasi(vivo){
+                    return("handphone " + vivo + " ini digunakan untuk berkomunikasi");
+                }
+                sosialmedia(realme){
+                    return("handphone " + realme + " ini untuk mengakses sosial");
+                }
+            }
+            let oppo = new handphone;
+            let vivo = new handphone;
+            let realme = new handphone;
+            console.log(oppo.komunikasi(m));
+            console.log(oppo.harga);
+            console.log(oppo.warna);
+            console.log(vivo.dokumentasi(r));
+            console.log(vivo.harga1);
+            console.log(vivo.warna1);
+            console.log(realme.sosialmedia(z));
+            console.log(realme.harga2);
+            console.log(realme.warna2);
+        }
+        </script>
+    </body>
+</html>
